@@ -1,0 +1,14 @@
+.main-app{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90vw;
+  margin: 20px auto 0 auto;
+}
+
+
+.inven-heading{
+  font-weight: 600;
+  font-size: 32px;
+  color: brown;
+}

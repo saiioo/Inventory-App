@@ -1,0 +1,51 @@
+For APP.js
+
+
+// Import Statements: The code starts with importing necessary dependencies such as React, InventoryList, InventoryItemForm, and a CSS file App.css. Make sure to install and import all the required dependencies before using them in your code.
+// App Component: The code defines a functional component called App using an arrow function. The App component is the entry point of the application and serves as the main container for other components.
+// JSX Markup: The return statement in the App component returns JSX markup, which represents the structure of the user interface. It includes a div element with a className of 'main-app' to apply a CSS class for styling purposes. Inside the div, there's an h1 element with a className of 'inven-heading' for displaying the heading "Inventory". Below the heading, there are two components rendered: InventoryItemForm and InventoryList.
+// InventoryItemForm and InventoryList Components: The InventoryItemForm and InventoryList components are being used inside the App component. Make sure that these components are defined and imported correctly in your project.
+// CSS Styling: The App.css file is imported to apply custom styles to the App component. Make sure that the file path is correct and the CSS styles defined in App.css are being applied as expected.
+// Class and Classname: The usage of className instead of class attribute is appropriate in JSX because class is a reserved keyword in JavaScript. React uses className to define CSS classes for HTML elements rendered in JSX.
+// Accessibility: Ensure that the components and UI elements in the App component are accessible and follow best practices for web accessibility.
+// Error Handling: The code does not include error handling or validation for the form input in InventoryItemForm component. Consider adding appropriate validation and error handling logic to ensure a robust and reliable application.
+// Code Organization: Ensure that the code is properly organized, following best practices for component structure, file structure, and separation of concerns.
+// Code Documentation: Consider adding comments within the code to explain complex logic or to provide documentation for future maintainers.
+// Remember to thoroughly test your application to ensure it works as expected and meets your project requirements.
+
+
+
+
+
+for InventoryItemForm.js
+// Import axios for making HTTP requests: This comment indicates that the axios library is imported for making HTTP requests to the server. It highlights the purpose of the axios import in the component.
+// Import CSS styles: This comment indicates that the CSS styles for the InventoryItemForm component are imported from an external file named InventoryItemForm.css. It highlights the requirement of CSS styles for the proper rendering and styling of the component.
+// State for item name input: This comment explains that the name state is used to manage the value of the item name input field in the form. It provides a brief description of the purpose of this state.
+// State for item quantity input: This comment explains that the quantity state is used to manage the value of the item quantity input field in the form. It provides a brief description of the purpose of this state.
+// Add new item to server: This comment explains that the handleSubmit function is responsible for making an HTTP POST request to the server to add a new item with the provided name and quantity. It provides an overview of the functionality of this function.
+// Reset form fields: This comment explains that the form fields for item name and quantity are reset after a successful HTTP POST request to the server. It highlights the purpose of resetting the form fields in the component.
+// Handling form submission: This comment explains that the handleSubmit function is triggered when the form is submitted and it handles the form submission logic. It provides a brief description of the purpose of this function.
+// JSX markup for form: This comment indicates that the following JSX markup represents the form for adding an item in the component. It provides an overview of the purpose of the JSX markup in the component.
+// onChange event handlers for input fields: These comments explain that the onChange event handlers are used to capture the user input for the item name and quantity fields and update the corresponding state variables. They provide a brief description of the purpose of these event handlers in the component.
+// Exporting the component: This comment indicates that the InventoryItemForm component is exported as the default export from the module. It highlights the usage of the export default statement in the component.
+
+
+
+for InventoryList.js
+
+State:
+
+inventory: An array that stores the inventory data fetched from the server using Axios.
+showPopup: A boolean value that determines whether the update quantity popup is shown or hidden.
+itemId: A string that stores the id of the item to be updated.
+updatedQuantity: A string that stores the updated quantity value entered in the update quantity popup.
+Methods:
+
+fetchInventory(): A function that fetches the inventory data from the server using Axios and updates the inventory state with the fetched data.
+handleEditClick(id): A function that is called when the "Edit" button is clicked for an item. It sets the showPopup state to true to show the update quantity popup and sets the itemId state to the id of the item to be updated.
+handleUpdateClick(): A function that is called when the "Update" button is clicked in the update quantity popup. It sends a PUT request to the server using Axios to update the quantity of the item with the itemId and updatedQuantity states. It then sets the showPopup, updatedQuantity, and itemId states to their initial values, and fetches the updated inventory data.
+handleDeleteClick(id): A function that is called when the "Delete" button is clicked for an item. It sends a DELETE request to the server using Axios to delete the item with the given id, and fetches the updated inventory data.
+handleUpdateInventoryClick(): A function that is called when the "Update Inventory" button is clicked. It simply calls the fetchInventory() function to fetch the updated inventory data.
+Render:
+The component returns a JSX structure that represents the inventory list, including a table with column headers for "Name", "Quantity", "Edit", and "Delete", and a loop that maps through the inventory state and renders a row for each item with the item's name, quantity, and "Edit" and "Delete" buttons. If the showPopup state is true, it also renders a popup for updating the quantity of the item, which includes an input field for entering the updated quantity, and "Update" and "Cancel" buttons.
+The component is also styled using CSS classes defined in an external file called "InventoryList.css".
